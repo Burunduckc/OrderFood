@@ -1,8 +1,13 @@
+//React
+import {Fragment} from "react";
+//Ui
+import {Meal} from "./Meals/Meals";
+
 function App() {
   return (
-    <div>
-      <h2>Let's get started!</h2>
-    </div>
+    <Fragment>
+      <Meal/>
+    </Fragment>
   );
 }
 
