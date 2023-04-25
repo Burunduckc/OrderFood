@@ -6,30 +6,31 @@ import {Input} from "../../UI/Input";
 import styles from './MealForm.module.css'
 
 export const MealForm = (prop) => {
-    const [amountValid, setAmount] = useState()
-    const amounInputRef = useRef()
+    const [amountValid, setAmount] = useState(true)
+    const amountInputRef = useRef()
     const submit = (e) => {
         e.preventDefault()
 
-        const entredAmount = amounInputRef.current.value;
+        const entredAmount = amountInputRef.current.value;
         const entNumb = +entredAmount;
 
         if (entredAmount.trim().length === 0 || entredAmount < 1 || entNumb > 5){
             setAmount(false)
             return;
         }
-        prop.onAddToCart(entredAmount);
+        prop.onAddToCart(entNumb);
     }
 
     return <form className={styles.form} onSubmit={submit}>
         <Input
             label = 'Amount'
-            ref={amounInputRef}
+            ref={amountInputRef}
             input={{
         id:'Amount',
         type: 'number',
         min: '1',
         max: '5',
+        step: '1',
         defaultValue: '1'
         }
         }/>
