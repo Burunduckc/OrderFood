@@ -8,6 +8,7 @@ export const AvabMeals = (prop) => {
 
     const dummyMealList = dummyMeal.map(i =>
         <MealItem key={i.id}
+                  id={i.id}
                   title={i.name}
                   description={i.description}
                   price={i.price}/> )

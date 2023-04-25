@@ -6,7 +6,7 @@ import styles from './Modal.module.css'
 
 //Component
 const Backdrop = (prop) => {
-    return <div className={styles.backdrop}></div>
+    return <div className={styles.backdrop} onClick={prop.onClose}></div>
 }
 
 const ModalOverlay = (prop) => {
@@ -19,7 +19,7 @@ const ModalOverlay = (prop) => {
 
 export const Modal = (prop) => {
      return <Fragment>
-         {createPortal(<Backdrop/>,
+         {createPortal(<Backdrop onClose={prop.onClose}/>,
          document.getElementById('modal-root'))}
          {createPortal(<ModalOverlay>{prop.children}</ModalOverlay>,
          document.getElementById('modal-root'))}
