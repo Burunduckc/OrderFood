@@ -15,21 +15,20 @@ const defCartState = {
      if (action.type === 'ADD_CART'){
     const updateTotalAmount = state.totalAmount + action.item.price * action.item.amount
 
-    const existingCart = state.items.findIndex(item => {
-        return item.id === action.item.id
-    })
+    const existingCartIndex = state.items.findIndex(
+        item => item.id === action.item.id
+    )
 
-        const existingCartItem = state.items[existingCart]
+        const existingCartItem = state.items[existingCartIndex]
          let updateItems;
     if (existingCartItem){
-
         const updateItem = {
             ...existingCartItem,
-            amount: existingCart.amount + action.item.amount
+            amount: existingCartItem.amount + action.item.amount
         };
 
         updateItems = [...state.items];
-        updateItems[existingCart]= updateItem
+        updateItems[existingCartIndex]= updateItem
     } else {
         updateItems = state.items.concat(action.item)
     }
