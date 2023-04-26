@@ -1,26 +1,26 @@
 export const DUMMY_MEALS = [
     {
         id: 'm1',
-        name: 'Sushi',
-        description: 'Finest fish and veggies',
-        price: 22.99,
+        name: 'Сушi',
+        description: 'Найкраща риба та овочі',
+        price: 399.99,
     },
     {
         id: 'm2',
-        name: 'Schnitzel',
-        description: 'A german specialty!',
-        price: 16.5,
+        name: 'Шніцель',
+        description: 'Німецька особливість!',
+        price: 780.99,
     },
     {
         id: 'm3',
-        name: 'Barbecue Burger',
-        description: 'American, raw, meaty',
-        price: 12.99,
+        name: 'Бургер барбекю',
+        description: 'Американський, сирий, м\'ясний',
+        price: 634.99,
     },
     {
         id: 'm4',
-        name: 'Green Bowl',
-        description: 'Healthy...and green...',
-        price: 18.99,
+        name: 'Зелена чаша',
+        description: 'Здоровий... і зелений...',
+        price: 412.99,
     },
 ];

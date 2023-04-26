@@ -10,7 +10,7 @@ import styles from './Cart.module.css'
 export const Cart = (prop) => {
     const cartCtx = useContext(Cartcontext)
 
-    const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`
+    const totalAmount = `₴${cartCtx.totalAmount.toFixed(2)}`
     const hasItems = cartCtx.items.length > 0;
 
     const removeItem = (id) => {
@@ -34,7 +34,7 @@ export const Cart = (prop) => {
         <Modal onClose={prop.shotDown}>
         {cartItems}
         <div className={styles.total}>
-            <span>Total Amount</span>
+            <span>Загальна кількість</span>
             <span>{totalAmount}</span>
         </div>
         <div className={styles.actions}>

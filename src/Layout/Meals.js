@@ -39,10 +39,10 @@ export const Meal = (prop) => {
     return (
         <Fragment>
         <Header>
-            <h1>Meals</h1>
+            <h1>Харчування</h1>
             <ButtonMeal onClick={prop.onShow} btn={btnClasses}>
                 <span className={classes.icon}><Icon/></span>
-                <span>Your Cart</span>
+                <span>Твiй кошик</span>
                 <span className={classes.badge}>{numberOfCartItems}</span>
             </ButtonMeal>
         </Header>

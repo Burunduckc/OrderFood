@@ -23,7 +23,7 @@ export const MealForm = (prop) => {
 
     return <form className={styles.form} onSubmit={submit}>
         <Input
-            label = 'Amount'
+            label = 'Кількість'
             ref={amountInputRef}
             input={{
         id:'Amount',
@@ -34,7 +34,7 @@ export const MealForm = (prop) => {
         defaultValue: '1'
         }
         }/>
-        <button>+ Add</button>
+        <button>+ Додати</button>
         {!amountValid && <p>Будь ласка, введiть правильнi даннi(1-5)</p>}
     </form>
 }

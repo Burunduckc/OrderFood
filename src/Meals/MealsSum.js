@@ -1,14 +1,14 @@
 export const MealsSum = (prop) => {
     return (
         <section className={prop.style}>
-            <h2>Delicious Food, Delivered to You</h2>
+            <h2>Смачна їжа з доставкою</h2>
             <p>
-                Choose your favorite meal from our broad selection of available meals
-                and enjoy a delicious lunch or dinner at home.
+                Виберіть свою улюблену страву з нашого широкого асортименту доступних страв
+                і смачно пообідати або повечеряти вдома.
             </p>
             <p>
-                All our meals are cooked with high-quality ingredients, just-in-time and
-                of course by experienced chefs!
+                Усі наші страви готуються з високоякісних інгредієнтів, точно вчасно
+                звичайно досвідченими кухарями!
             </p>
         </section>
     )
