@@ -32,13 +32,31 @@ const defCartState = {
     } else {
         updateItems = state.items.concat(action.item)
     }
-
-
         return {
         items: updateItems,
-        totalAmount: updateTotalAmount}
-    }
+        totalAmount: updateTotalAmount
+        };
+    };
+     if (action.type === 'REMOVE'){
 
+         const exsitsingCartItemIndex = state.items.findIndex(
+             (item) => item.id === action.id
+         );
+         const exiistingItem = state.items[exsitsingCartItemIndex]
+         const updateTotalAmount = state.totalAmount - exiistingItem.price;
+         let updatedItems;
+         if (exiistingItem.amount === 1){
+            updatedItems = state.items.filter(item => item.id !== action.id)
+         } else {
+            const updateItem = {...exiistingItem, amount: exiistingItem.amount - 1};
+            updatedItems = [...state.items];
+            updatedItems[exsitsingCartItemIndex] = updateItem;
+         }
+         return {
+             items: updatedItems,
+             totalAmount: updateTotalAmount
+         }
+     }
      return defCartState
  }
 export const CartProvider = (prop) => {

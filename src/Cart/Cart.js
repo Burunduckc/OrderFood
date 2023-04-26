@@ -14,11 +14,11 @@ export const Cart = (prop) => {
     const hasItems = cartCtx.items.length > 0;
 
     const removeItem = (id) => {
-
+    cartCtx.removeItem(id)
     }
 
-    const addItem = () => {
-
+    const addItem = (item) => {
+    cartCtx.addItem(item)
     }
 
     const cartItems = <ul className={styles.cartItems}>{cartCtx.items.map(item => {return <CartItem
